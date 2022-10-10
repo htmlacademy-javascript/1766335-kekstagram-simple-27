@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм (простой)»
 
-* Студент: [Владимир  Бумагин](https://up.htmlacademy.ru/javascript/27/user/1766335).
-* Наставник: `Неизвестно`.
+- Студент: [Владимир Бумагин](https://up.htmlacademy.ru/javascript/27/user/1766335).
+- Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er/certificates).
 
 ---
 
