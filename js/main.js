@@ -1,12 +1,12 @@
 function getRandomInt(min, max) {
   if (
-    typeof min === "number" &&
-    typeof max === "number" &&
+    typeof min === 'number' &&
+    typeof max === 'number' &&
     min >= 0 &&
     max >= 0
   ) {
     if (max < min) {
-      let temp = min;
+      const temp = min;
       min = max;
       max = temp;
     }
@@ -16,10 +16,10 @@ function getRandomInt(min, max) {
   }
 }
 
-getRandomInt(1, 15);
+getRandomInt(1, 10);
 
 function checkLengthString(string, maxLength) {
-  let strLength = string.length;
+  const strLength = string.length;
   if (strLength <= maxLength) {
     return true;
   } else {
@@ -27,4 +27,4 @@ function checkLengthString(string, maxLength) {
   }
 }
 
-checkLengthString("Hello", 5);
+checkLengthString('Helssslo', 5);
