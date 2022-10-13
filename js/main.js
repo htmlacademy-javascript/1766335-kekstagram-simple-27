@@ -20,11 +20,7 @@ getRandomInt(1, 10);
 
 function checkLengthString(string, maxLength) {
   const strLength = string.length;
-  if (strLength <= maxLength) {
-    return true;
-  } else {
-    return false;
-  }
+  return strLength <= maxLength;
 }
 
-checkLengthString('Helssslo', 5);
+checkLengthString('Hqweqweello', 5);
