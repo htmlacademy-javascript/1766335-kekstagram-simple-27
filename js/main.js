@@ -1,26 +1,30 @@
-function getRandomInt(min, max) {
-  if (
-    typeof min === 'number' &&
-    typeof max === 'number' &&
-    min >= 0 &&
-    max >= 0
-  ) {
-    if (max < min) {
-      const temp = min;
-      min = max;
-      max = temp;
-    }
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  } else {
+const PHOTO_INFO_COUNT = 25;
+
+const getRandomPositiveInteger = (a, b) => {
+  if (a < 0 || b < 0) {
     return NaN;
   }
-}
-
-getRandomInt(1, 10);
+  const lower = Math.ceil(Math.min(a, b));
+  const upper = Math.floor(Math.max(a, b));
+  const result = Math.random() * (upper - lower + 1) + lower;
+  return Math.floor(result);
+};
 
 function checkLengthString(string, maxLength) {
   const strLength = string.length;
   return strLength <= maxLength;
 }
 
-checkLengthString('Hqweqweello', 5);
+checkLengthString(2, 5);
+
+const createPhotoInfo = () => ({
+  id: getRandomPositiveInteger(1, 25),
+  url: `photos/${getRandomPositiveInteger(1, 25)}.jpg`,
+  description: 'Лучшее фото в мире',
+  likes: getRandomPositiveInteger(15, 200),
+  comments: getRandomPositiveInteger(0, 200),
+});
+
+const infoPhotos = Array.from({ length: PHOTO_INFO_COUNT }, createPhotoInfo);
+
+console.log(infoPhotos);
