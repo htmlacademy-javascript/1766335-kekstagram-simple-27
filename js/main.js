@@ -25,5 +25,5 @@ const createPhotoInfo = () => ({
   comments: getRandomPositiveInteger(0, 200),
 });
 
-const infoPhotos = Array.from({ length: PHOTO_INFO_COUNT }, createPhotoInfo);
+Array.from({ length: PHOTO_INFO_COUNT }, createPhotoInfo);
 
