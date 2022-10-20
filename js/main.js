@@ -27,4 +27,3 @@ const createPhotoInfo = () => ({
 
 const infoPhotos = Array.from({ length: PHOTO_INFO_COUNT }, createPhotoInfo);
 
-console.log(infoPhotos);
